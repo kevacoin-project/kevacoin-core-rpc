@@ -495,6 +495,30 @@ var _default = {
     category: 'rawtransactions',
     version: '>=0.18.0'
   },
+  keva_delete: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_filter: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_get: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_list_namespace: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_namespace: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_put: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
   keypoolRefill: {
     category: 'wallet',
     features: {

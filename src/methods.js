@@ -11,6 +11,30 @@ import { map, set } from 'lodash';
  */
 
 export default {
+  KEVA_DELETE: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  KEVA_FILTER: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  KEVA_GET: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  KEVA_LIST_NAMESPACE: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  KEVA_NAMESPACE: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  KEVA_PUT: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
   abandonTransaction: {
     category: 'wallet',
     features: {
