@@ -23,7 +23,7 @@ export default {
     category: 'keva',
     version: '>=0.16.3'
   },
-  KEVA_LIST_NAMESPACE: {
+  KEVA_LIST_NAMESPACES: {
     category: 'keva',
     version: '>=0.16.3'
   },
