@@ -7,7 +7,7 @@ exports.default = void 0;
 
 var _lodash = require("lodash");
 
-/* eslint-disable no-inline-comments */
+/* eslint-disable */
 
 /**
  * Module dependencies.
@@ -17,30 +17,6 @@ var _lodash = require("lodash");
  * Export available rpc methods.
  */
 var _default = {
-  KEVA_DELETE: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
-  KEVA_FILTER: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
-  KEVA_GET: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
-  KEVA_LIST_NAMESPACES: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
-  KEVA_NAMESPACE: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
-  KEVA_PUT: {
-    category: 'keva',
-    version: '>=0.16.3'
-  },
   abandonTransaction: {
     category: 'wallet',
     features: {
@@ -518,6 +494,30 @@ var _default = {
   joinPsbts: {
     category: 'rawtransactions',
     version: '>=0.18.0'
+  },
+  keva_delete: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_filter: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_get: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_list_namespaces: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_namespace: {
+    category: 'keva',
+    version: '>=0.16.3'
+  },
+  keva_put: {
+    category: 'keva',
+    version: '>=0.16.3'
   },
   keypoolRefill: {
     category: 'wallet',
