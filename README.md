@@ -50,7 +50,7 @@ const client = new Client({ network: 'regtest' });
 ##### Setting a custom port
 
 ```js
-const client = new Client({ port: 28332 });
+const client = new Client({ port: 29332 });
 ```
 
 #### Connecting to an SSL/TLS server with strict checking enabled
@@ -142,7 +142,7 @@ Historically, the _accounts_ feature was supposed to offer similar functionality
 To enable Multi Wallet support, start by specifying the number of added wallets you would like to have available and loaded on the server using the `-wallet` argument multiple times. For convenience, the bitcoin-core docker image will be used, but it's not a requirement:
 
 ```sh
-docker run --rm -it -p 18332:18332 ruimarinho/bitcoin-core:0.15-alpine \
+docker run --rm -it -p 19332:19332 ruimarinho/bitcoin-core:0.15-alpine \
   -printtoconsole \
   -server \
   -rpcauth='foo:e1fcea9fb59df8b0388f251984fe85$26431097d48c5b6047df8dee64f387f63835c01a2a463728ad75087d0133b8e6' \
@@ -223,7 +223,7 @@ docker run --rm -it ruimarinho/bitcoin-core:0.12-alpine -printtoconsole -rpcuser
 
 These configuration values may also be set on the `bitcoin.conf` file of your platform installation.
 
-By default, port `8332` is used to listen for requests in `mainnet` mode, or `18332` in `testnet` and `regtest` modes (the regtest change will be changed to `18443` in [0.16](https://github.com/bitcoin/bitcoin/pull/10825)). Use the `network` property to initialize the client on the desired mode and automatically set the respective default port. You can optionally set a custom port of your choice too.
+By default, port `9332` is used to listen for requests in `mainnet` mode, or `19332` in `testnet` and `regtest` modes (the regtest change will be changed to `18443` in [0.16](https://github.com/bitcoin/bitcoin/pull/10825)). Use the `network` property to initialize the client on the desired mode and automatically set the respective default port. You can optionally set a custom port of your choice too.
 
 The RPC services binds to the localhost loopback network interface, so use `rpcbind` to change where to bind to and `rpcallowip` to whitelist source IP access.
 
@@ -411,8 +411,8 @@ You can use `stunnel` by configuring `stunnel.conf` with the following service r
 
 ```
 [bitcoin]
-accept = 28332
-connect = 18332
+accept = 29332
+connect = 19332
 cert = /etc/ssl/bitcoind/cert.pem
 key = /etc/ssl/bitcoind/key.pem
 ```
@@ -422,7 +422,7 @@ The `key` option may be omitted if you concatenating your private and public cer
 On some versions of `stunnel` it is also possible to start a service using command line arguments. The equivalent would be:
 
 ```sh
-stunnel -d 28332 -r 127.0.0.1:18332 -p stunnel.pem -P ''
+stunnel -d 29332 -r 127.0.0.1:19332 -p stunnel.pem -P ''
 ```
 
 Then pass the public certificate to the client:
@@ -434,7 +434,7 @@ const client = new Client({
   agentOptions: {
     ca: fs.readFileSync('/etc/ssl/bitcoind/cert.pem')
   },
-  port: 28332,
+  port: 29332,
   ssl: true
 });
 ```
@@ -461,15 +461,15 @@ client.getTransactionByHash('b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c
 //   "level": 20,
 //   "request": {
 //     "headers": {
-//       "host": "localhost:8332",
+//       "host": "localhost:9332",
 //       "accept": "application/json"
 //     },
 //     "id": "82cea4e5-2c85-4284-b9ec-e5876c84e67c",
 //     "method": "GET",
 //     "type": "request",
-//     "uri": "http://localhost:8332/rest/tx/b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c5cbeb01e686fe.json"
+//     "uri": "http://localhost:9332/rest/tx/b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c5cbeb01e686fe.json"
 //   },
-//   "msg": "Making request 82cea4e5-2c85-4284-b9ec-e5876c84e67c to GET http://localhost:8332/rest/tx/b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c5cbeb01e686fe.json",
+//   "msg": "Making request 82cea4e5-2c85-4284-b9ec-e5876c84e67c to GET http://localhost:9332/rest/tx/b4dd08f32be15d96b7166fd77afd18aece7480f72af6c9c7f9c5cbeb01e686fe.json",
 //   "time": "2017-02-07T14:40:35.020Z",
 //   "v": 0
 // }

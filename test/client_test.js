@@ -58,19 +58,19 @@ describe('Client', () => {
     });
 
     it('should have default port set to `mainnet`\'s one', () => {
-      new Client().port.should.equal(8332);
+      new Client().port.should.equal(9332);
     });
 
-    it('should set default to port `8332` if network is `mainnet`', () => {
-      new Client({ network: 'mainnet' }).port.should.equal(8332);
+    it('should set default to port `9332` if network is `mainnet`', () => {
+      new Client({ network: 'mainnet' }).port.should.equal(9332);
     });
 
-    it('should set default to port `18332` if network is `testnet`', () => {
-      new Client({ network: 'testnet' }).port.should.equal(18332);
+    it('should set default to port `19332` if network is `testnet`', () => {
+      new Client({ network: 'testnet' }).port.should.equal(19332);
     });
 
-    it('should set default to port `18332` if network is `regtest`', () => {
-      new Client({ network: 'regtest' }).port.should.equal(18332);
+    it('should set default to port `19332` if network is `regtest`', () => {
+      new Client({ network: 'regtest' }).port.should.equal(19332);
     });
 
     it('should not have ssl enabled by default', () => {
